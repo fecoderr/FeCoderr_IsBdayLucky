@@ -4,11 +4,16 @@ const checkNumberButton = document.querySelector("#check-number");
 const outputBox = document.querySelector("#output-box")
 
 function compareValues(sum, luckyNumber) {
+if (luckyNumber<0){
+outputBox.innerText ="Please enter a valid number";
+}else{
+
   if (sum % luckyNumber === 0) {
     outputBox.innerText = "Your birthday is lucky";
   } else {
     outputBox.innerText = "Your birthday is not lucky"
   }
+}
 
 }
 
